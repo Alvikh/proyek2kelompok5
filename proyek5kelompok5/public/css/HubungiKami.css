@@ -1,0 +1,156 @@
+.u-section-1 .u-sheet-1 {
+  min-height: 472px;
+}
+
+.u-section-1 .u-text-1 {
+  font-weight: 800;
+  margin: 63px auto 0 478px;
+}
+
+.u-section-1 .u-group-1 {
+  width: 364px;
+  height: auto;
+  min-height: 154px;
+  margin: 69px auto 0 0;
+}
+
+.u-section-1 .u-container-layout-1 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.u-section-1 .u-text-2 {
+  font-weight: 400;
+  margin: 34px 0 0;
+}
+
+.u-section-1 .u-group-2 {
+  width: 364px;
+  height: auto;
+  min-height: 160px;
+  margin: -150px -24px 0 auto;
+}
+
+.u-section-1 .u-container-layout-2 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.u-section-1 .u-text-3 {
+  font-weight: 400;
+  margin: 22px 0 0 114px;
+}
+
+.u-section-1 .u-icon-1 {
+  width: 26px;
+  height: 26px;
+  margin: -26px auto 0 73px;
+  padding: 0;
+}
+
+.u-section-1 .u-icon-2 {
+  width: 27px;
+  height: 27px;
+  margin: -58px auto 0 72px;
+  padding: 0;
+}
+
+.u-section-1 .u-group-3 {
+  width: 364px;
+  height: auto;
+  min-height: 154px;
+  margin: -160px 374px 60px auto;
+}
+
+.u-section-1 .u-container-layout-3 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.u-section-1 .u-text-4 {
+  font-weight: 400;
+  margin: 34px 0 0;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-text-1 {
+    margin-left: 494px;
+  }
+
+  .u-section-1 .u-group-1 {
+    margin-top: 64px;
+    height: auto;
+  }
+
+  .u-section-1 .u-container-layout-1 {
+    padding-top: 19px;
+    padding-bottom: 19px;
+  }
+
+  .u-section-1 .u-group-2 {
+    margin-top: 64px;
+    margin-right: 163px;
+    height: auto;
+  }
+
+  .u-section-1 .u-container-layout-2 {
+    padding-top: 19px;
+    padding-bottom: 19px;
+  }
+
+  .u-section-1 .u-group-3 {
+    margin-top: 64px;
+    margin-left: 388px;
+    height: auto;
+  }
+
+  .u-section-1 .u-container-layout-3 {
+    padding-top: 19px;
+    padding-bottom: 19px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-text-1 {
+    margin-left: 512px;
+  }
+
+  .u-section-1 .u-group-2 {
+    margin-right: 273px;
+  }
+
+  .u-section-1 .u-group-3 {
+    margin-right: 356px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-text-1 {
+    margin-left: 527px;
+  }
+
+  .u-section-1 .u-group-2 {
+    margin-right: 363px;
+  }
+
+  .u-section-1 .u-group-3 {
+    margin-right: 176px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-text-1 {
+    margin-left: 543px;
+  }
+
+  .u-section-1 .u-group-2 {
+    margin-right: auto;
+    margin-left: 400px;
+  }
+
+  .u-section-1 .u-group-3 {
+    width: 340px;
+    margin-right: 0;
+    margin-left: 400px;
+  }
+}
