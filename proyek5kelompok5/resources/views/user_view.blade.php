@@ -37,7 +37,7 @@
                             <!-- Add Pasang Sekarang and Lihat Spesifikasi links -->
                             <!-- Add Pasang Sekarang and Lihat Spesifikasi links -->
 <div class="mt-2">
-    <a href="#" class="btn btn-sm btn-success">Pasang Sekarang</a>
+    <a href="{{ route('user.blogs') }}" class="btn btn-sm btn-success">Pasang Sekarang</a>
     <button type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#exampleModal{{ $blog->id }}">Lihat Spesifikasi</button>
 </div>
 
