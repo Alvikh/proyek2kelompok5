@@ -39,7 +39,7 @@
         <div class="u-container-style u-custom-color-4 u-group u-radius-50 u-shape-round u-group-1">
           <div class="u-container-layout u-container-layout-1">
             <p class="u-custom-font u-font-montserrat u-text u-text-1">CV Yotoagrodita yang pertama didirikan tahun 2016 ini adalah bidang usaha dari Kang Susanto Mulyono (502) yang bergerak di bidang Energi Baru dan Terbarukan (EBT) khususnya tenaga surya. Yotoagrodita memfokuskan sebagai penyedia solusi sistem Pembangkit Listrik Tenaga Surya (PLTS) dengan storage berjenis Lithium yang mampu menyediakan kebutuhan listrik tanpa bergantung dari sumber listrik yang lain dan dapat digabungkan dengan berbagai sumber listrik lain seperti Genset maupun PLN pada mode Hybrid.</p>
-            <a href="{{ url ('paketkebutuhan')}}" class="u-active-custom-color-2 u-border-none u-btn u-button-style u-custom-color-3 u-hover-palette-1-base u-btn-1">Lihat Produk Kami</a>
+            <a href="{{ url ('produk')}}" class="u-active-custom-color-2 u-border-none u-btn u-button-style u-custom-color-3 u-hover-palette-1-base u-btn-1">Lihat Produk Kami</a>
           </div>
         </div>
       </div>
