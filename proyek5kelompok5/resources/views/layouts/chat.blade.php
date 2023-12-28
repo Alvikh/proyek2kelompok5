@@ -53,7 +53,7 @@ svg{width: 30px;height: 30px;vertical-align: middle;fill: var(--warna-icon)}
     </div>
   </div>
   
-  <a class='chatStart' href='https://api.whatsapp.com/send?phone=6280000000000&text=Assalamualaikum,%20Saya%20ingin%20bertanya' rel='nofollow noreferrer' target='_blank'>
+  <a class='chatStart' href='https://api.whatsapp.com/send?phone=6281222116891&text=Assalamualaikum,%20Saya%20ingin%20bertanya' rel='nofollow noreferrer' target='_blank'>
     <span>Mulai chat...</span>        
   </a>
 </div>
