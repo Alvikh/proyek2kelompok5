@@ -34,7 +34,9 @@
                             <p>Capacity: {{ optional($blog->capacity)->capacity }}</p>
                             <p>Storage: {{ optional($blog->storage)->storage }}</p>
 
-                            
+                            <div class="mt-2">
+                                <button type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#exampleModal{{ $blog->id }}">Lihat Spesifikasi</button>
+                            </div>
 
                         </div>
                     </div>
