@@ -95,7 +95,6 @@
       </style>
 </head>
 
-
 <div><center><h2>Ajukan Pemasangan</h2><center/></div>
     <div class="container">
       <form action="{{ route('submitted') }}" method="post">

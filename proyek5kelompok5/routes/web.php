@@ -129,3 +129,4 @@ Route::delete('/admin/storage/{storage}', [StorageController::class, 'destroy'])
 
 use App\Http\Controllers\BarController;
 Route::get('/bar', [BarController::class, 'barChart']);
+Route::get('/produk', [BlogController::class, 'produk'])->name('produk');

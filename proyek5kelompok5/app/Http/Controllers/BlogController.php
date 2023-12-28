@@ -122,4 +122,9 @@ class BlogController extends Controller
         $blogs = Blog::all();
         return view('user_view', compact('blogs'));
     }
+    public function produk()
+    {
+        $blogs = Blog::all();
+        return view('produk', compact('blogs'));
+    }
 }
