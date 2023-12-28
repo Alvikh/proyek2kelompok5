@@ -9,6 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ 'Yoto Agro Dita' }}</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset ('img/icon.ico') }}">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">

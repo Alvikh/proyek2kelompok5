@@ -9,7 +9,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Yoto Agro Dita - Admin') }}</title>
+    <title>{{ 'Yoto Agro Dita' }}</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset ('img/icon.ico') }}">
 
     <!-- Fonts -->
     <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
