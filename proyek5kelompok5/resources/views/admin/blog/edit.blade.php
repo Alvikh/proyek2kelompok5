@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Edit Blog</title>
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
@@ -58,7 +58,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="font-weight-bold">Image</label>
+                                <label class="font-weight-bold">Gambar</label>
                                 <input type="file" class="form-control @error('image') is-invalid @enderror" name="image">
                                 @error('image')
                                     <div class="alert alert-danger mt-2">
@@ -71,7 +71,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="font-weight-bold">Title</label>
+                                <label class="font-weight-bold">Nama Produk</label>
                                 <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title', $blog->title) }}" placeholder="Enter Blog Title">
                                 @error('title')
                                     <div class="alert alert-danger mt-2">
@@ -81,7 +81,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="font-weight-bold">Content</label>
+                                <label class="font-weight-bold">Spesifikasi</label>
                                 <textarea class="form-control @error('content') is-invalid @enderror" name="content" rows="5" placeholder="Enter Blog Content">{{ old('content', $blog->content) }}</textarea>
                                 @error('content')
                                     <div class="alert alert-danger mt-2">

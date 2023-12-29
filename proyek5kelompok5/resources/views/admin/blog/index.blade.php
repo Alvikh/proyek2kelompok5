@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Blog List</title>
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
@@ -19,7 +19,7 @@
             <div class="col-md-12">
                 <div class="card border-0 shadow rounded">
                     <div class="card-body">
-                        <h2 class="font-weight-bold mb-4">Blog List</h2>
+                        <h2 class="font-weight-bold mb-4">List Produk</h2>
                         <div class="mb-3">
                             <a href="{{ route('admin.blog.create') }}" class="btn btn-sm btn-success">Create Blog</a>
                         </div>
@@ -36,12 +36,13 @@
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Image</th>
-                                    <th scope="col">Title</th>
-                                    <th scope="col">Content</th>
-                                    <th scope="col">Capacity</th>
-                                    <th scope="col">Storage</th>
-                                    <th scope="col">Actions</th>
+                                    <th scope="col">No.</th>
+                                    <th scope="col">Gambar</th>
+                                    <th scope="col">Nama Produk</th>
+                                    <th scope="col">Spesifikasi</th>
+                                    <th scope="col">Kapasitas</th>
+                                    <th scope="col">Penyimpanan</th>
+                                    <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
 <!-- ... -->
