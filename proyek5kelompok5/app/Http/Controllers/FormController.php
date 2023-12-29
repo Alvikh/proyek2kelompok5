@@ -27,7 +27,7 @@ class FormController extends Controller
         
         // Simpan data ke dalam database
         PaketOrder::create([
-            'id' => $userId,
+            'user_id' => $userId,
             'nama' => $request->input('nama'),
             'kota' => $request->input('kota'),
             'hp' => $request->input('hp'),
@@ -35,7 +35,9 @@ class FormController extends Controller
             'paket_kebutuhan' => $request->input('paket_kebutuhan'),
             'pesan' => $request->input('pesan'),
         ]);
+        
 
         return view('submitted');
+
     }
 }

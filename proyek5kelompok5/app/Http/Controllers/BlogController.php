@@ -13,9 +13,20 @@ class BlogController extends Controller
     public function index()
     {
         $blogs = DB::table('blogs')         
-                ->join('solar_panel_capacities', 'solar_panel_capacities.id', '=', 'blogs.capacity_id')
-                ->join('storages', 'storages.id', '=', 'blogs.storage_id')
-                ->get();
+        ->join('solar_panel_capacities', 'solar_panel_capacities.id', '=', 'blogs.capacity_id')
+        ->join('storages', 'storages.id', '=', 'blogs.storage_id')
+        ->select(
+            'blogs.id as id_blogs',
+            'blogs.title',
+            'blogs.content',
+            'blogs.image',
+            'solar_panel_capacities.id as capacity_id',
+            'solar_panel_capacities.capacity',
+            'storages.id as storage_id',
+            'storages.storage'
+        )
+        ->get();
+        
         return view('admin.blog.index', compact('blogs'));
     }
 
@@ -127,4 +138,5 @@ class BlogController extends Controller
         $blogs = Blog::all();
         return view('produk', compact('blogs'));
     }
+
 }

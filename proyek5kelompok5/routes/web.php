@@ -102,10 +102,9 @@ use App\Http\Controllers\BlogController;
 Route::get('/blogs', [BlogController::class, 'index'])->name('admin.blog.index');
 Route::get('/blogs/create', [BlogController::class, 'create'])->name('admin.blog.create');
 Route::post('/blogs', [BlogController::class, 'store'])->name('admin.blog.store');
-Route::get('/blogs/{id}', [BlogController::class, 'show'])->name('admin.blog.show');
-Route::get('/blogs/{id}/edit', [BlogController::class, 'edit'])->name('admin.blog.edit');
+Route::get('/blogs/edit/{id}', [BlogController::class, 'edit'])->name('admin.blog.edit');
 Route::put('/blogs/{id}', [BlogController::class, 'update'])->name('admin.blog.update');
-Route::delete('/blogs/{id}', [BlogController::class, 'destroy'])->name('admin.blog.destroy');
+Route::delete('/blogs/delete/{id}', [BlogController::class, 'destroy'])->name('admin.blog.destroy');
 
 Route::get('/user-blogs', [BlogController::class, 'userView'])->name('user.blogs');
 

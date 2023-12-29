@@ -10,14 +10,13 @@ class PaketOrder extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id',
+        'user_id',
         'nama',
         'kota',
         'hp',
         'daya',
         'paket_kebutuhan',
         'pesan',
-        'confirmation'
-        // Add other fields as needed
     ];
+    
 }

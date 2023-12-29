@@ -60,8 +60,8 @@
             <td>{{ $blog->capacity }}</td>
             <td>{{ $blog->storage }}</td>
             <td>
-                <a href="{{ route('admin.blog.edit', $blog->id) }}" class="btn btn-sm btn-primary">Edit</a>
-                <form action="{{ route('admin.blog.destroy', $blog->id) }}" method="POST" style="display: inline-block;">
+                <a href="{{ route('admin.blog.edit',  $blog->id_blogs) }}" class="btn btn-sm btn-primary">Edit</a>
+                <form action="{{ route('admin.blog.destroy',  $blog->id_blogs) }}" method="POST" style="display: inline-block;">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this blog?')">Delete</button>
