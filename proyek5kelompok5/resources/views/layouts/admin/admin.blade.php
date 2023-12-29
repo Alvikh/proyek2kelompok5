@@ -91,7 +91,13 @@
         <span>{{ __('Customer') }}</span>
     </a>
 </li>
-
+<!-- Nav Item - pemasangan-->
+<li class="nav-item {{ request()->routeIs('admin.confirmed-paket-orders') ? 'active' : '' }}">
+    <a class="nav-link" href="{{ route('admin.confirmed-paket-orders') }}">
+        <i class="fas fa-person-digging"></i>
+        <span>{{ __('Data Pemasangan') }}</span>
+    </a>
+</li>
 <!-- Nav Item - Users -->
 <li class="nav-item {{ request()->routeIs('admin.users.index') ? 'active' : '' }}">
     <a class="nav-link" href="{{ route('admin.users.index') }}">
