@@ -136,11 +136,11 @@
 </li>
 
 
-<!-- Nav Item - Blog -->
+<!-- Nav Item - Produk-->
 <li class="nav-item {{ request()->routeIs('admin.blog.index') ? 'active' : '' }}">
     <a class="nav-link" href="{{ route('admin.blog.index') }}">
         <i class="fas fa-fw fa-solid fa-blog"></i>
-        <span>{{ __('Blog') }}</span>
+        <span>{{ __('Produk') }}</span>
     </a>
 </li>
 
@@ -273,7 +273,7 @@
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">{{ __('Ready to Leave?') }}</h5>
                 <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
+                    <span aria-hidden="true">x</span>
                 </button>
             </div>
             <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
