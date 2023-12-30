@@ -96,7 +96,7 @@
     <a class="nav-link" href="{{ route('admin.confirmed-paket-orders') }}">
         <i class="fas fa-person-digging"></i>
         <span>{{ __('Data Pemasangan') }}</span>
-    </a>
+    </a>
 </li>
 <!-- Nav Item - Users -->
 <li class="nav-item {{ request()->routeIs('admin.users.index') ? 'active' : '' }}">
