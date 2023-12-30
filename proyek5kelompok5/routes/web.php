@@ -55,6 +55,8 @@ use App\Http\Controllers\FormController;
 
 Route::post('/submitted', [FormController::class, 'submitted'])->name('submitted');
 
+
+
 //admin route
 
 
@@ -126,7 +128,10 @@ Route::get('/admin/storage/{storage}/edit', [StorageController::class, 'edit'])-
 Route::put('/admin/storage/{storage}', [StorageController::class, 'update'])->name('admin.storage.update');
 Route::delete('/admin/storage/{storage}', [StorageController::class, 'destroy'])->name('admin.storage.destroy');
 
+Route::get('/produk', [BlogController::class, 'produk'])->name('produk');
+Route::get('/pasang/{blogId}', [BlogController::class, 'showInstallationForm'])->name('pasang');
 
 use App\Http\Controllers\BarController;
 Route::get('/bar', [BarController::class, 'barChart']);
-Route::get('/produk', [BlogController::class, 'produk'])->name('produk');
+
+

@@ -138,5 +138,10 @@ class BlogController extends Controller
         $blogs = Blog::all();
         return view('produk', compact('blogs'));
     }
-
+        public function showInstallationForm($blogId)
+        {
+            $blog = Blog::find($blogId);
+            return view('pasang',  ['blog' => $blog]);
+        }
+        
 }

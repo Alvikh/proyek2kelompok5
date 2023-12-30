@@ -97,9 +97,37 @@
 
 <div><center><h2>Ajukan Pemasangan</h2><center/></div>
     <div class="container">
+
       <form action="{{ route('submitted') }}" method="post">
         @csrf
-    
+
+        <div class="row">
+          <div class="col-25">
+              <label for="title">Title</label>
+          </div>
+          <div class="col-75">
+              <input type="text" id="title" name="title" value="{{ $blog->title }}" readonly>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col-25">
+              <label for="capacity">Capacity</label>
+          </div>
+          <div class="col-75">
+              <input type="text" id="capacity" name="capacity" value="{{ optional($blog->capacity)->capacity }}" readonly>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col-25">
+              <label for="storage">Storage</label>
+          </div>
+          <div class="col-75">
+              <input type="text" id="storage" name="storage" value="{{ optional($blog->storage)->storage }}" readonly>
+          </div>
+      </div>
+
         <div class="row">
             <div class="col-25">
                 <label for="nama">Nama Lengkap</label>
@@ -135,34 +163,7 @@
                 <input type="text" id="daya" name="daya" placeholder="Masukkan Daya kWh PLN">
             </div>
         </div>
-    
-        <div class="row">
-            <div class="col-25">
-                <label for="paket_kebutuhan">Paket Kebutuhan</label>
-            </div>
-            <div class="col-75">
-                <select id="paket_kebutuhan" name="paket_kebutuhan">
-                    <option value="paket">Pilih Paket Kebutuhan</option>
-                    <option value="A">BASKARA 2kVA-1100 series</option>
-                    <option value="B">BASKARA 2kVA-2200 series</option>
-                    <option value="C">BASKARA 5kVA-3300 series</option>
-                    <option value="D">BASKARA 5kVA-5500 series</option>
-                    <option value="E">BASKARA 5kVA-6050 series</option>
-                    <option value="F">BASKARA 5kVA-6600 series</option>
-                    <option value="G">BASKARA 10kVA-8250 series</option>
-                    <option value="H">BASKARA 10kVA-8800 series</option>
-                    <option value="I">BASKARA 10kVA-9900 series</option>
-                    <option value="J">BASKARA 10kVA-11k series</option>
-                    <option value="K">BASKARA 10kVA-11k Plus series</option>
-                    <option value="L">BASKARA 15kVA-16.5K series</option>
-                    <option value="M">BASKARA 20kVA-22k series</option>
-                    <option value="N">BASKARA 20kVA-22k+ series</option>
-                    <option value="O">BASKARA 25kVA-27k+ series</option>
-                    <option value="P">Paket Request</option>
-                </select>
-            </div>
-        </div>
-    
+
         <div class="row">
             <div class="col-25">
                 <label for="pesan">Pesan</label>
@@ -179,6 +180,7 @@
     
       </div>
       <br>
+
     </section>
 
     
