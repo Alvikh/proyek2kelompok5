@@ -26,8 +26,6 @@ class InstallationController extends Controller
         $installation->pesan = $request->input('pesan');
         $installation->save();
 
-        // You can add any additional logic here (e.g., sending emails, notifications)
-
         return redirect()->route('submitted');
     }
 }

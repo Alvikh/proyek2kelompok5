@@ -129,6 +129,7 @@ Route::put('/admin/storage/{storage}', [StorageController::class, 'update'])->na
 Route::delete('/admin/storage/{storage}', [StorageController::class, 'destroy'])->name('admin.storage.destroy');
 
 Route::get('/produk', [BlogController::class, 'produk'])->name('produk');
+
 Route::get('/pasang/{blogId}', [BlogController::class, 'showInstallationForm'])->name('pasang');
 
 use App\Http\Controllers\BarController;
