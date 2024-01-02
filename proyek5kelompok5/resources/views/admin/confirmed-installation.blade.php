@@ -3,7 +3,7 @@
 
 @section('main-content')
 
-<h3>Confirmed Items</h3>
+<h3>Formulir Terkonfirmasi</h3>
 
 <style>
     .custom-btn-color {
@@ -45,13 +45,13 @@
         <table class="table table-custom">
             <thead>
                 <tr>
-                    <th>Title</th>
-                    <th>Capacity</th>
-                    <th>Storage</th>
-                    <th>Nama Lengkap</th>
+                    <th>Nama Produk</th>
+                    <th>Kapasitas</th>
+                    <th>Penyimpanan</th>
+                    <th>Nama</th>
                     <th>Kota</th>
                     <th>Nomor HP</th>
-                    <th>Daya kWh Meter PLN</th>
+                    <th>Daya</th>
                     <th>Pesan</th>
                 </tr>
             </thead>
@@ -59,8 +59,8 @@
                 @foreach($confirmedInstallations as $installation)
                     <tr>
                         <td>{{ $installation->title }}</td>
-                        <td>{{ optional($installation->capacity)->capacity }}</td>
-                        <td>{{ optional($installation->storage)->storage }}</td>
+                        <td>{{ $installation->capacity }}</td>
+                        <td>{{ $installation->storage }}</td>
                         <td>{{ $installation->nama }}</td>
                         <td>{{ $installation->kota }}</td>
                         <td>{{ $installation->hp }}</td>

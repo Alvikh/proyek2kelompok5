@@ -13,7 +13,7 @@
 
                     <!-- Installation Title -->
                     <div class="mb-3">
-                        <label for="title" class="form-label">Title:</label>
+                        <label for="title" class="form-label">Nama Produk:</label>
                         <input type="text" name="title" class="form-control" required>
                         @error('title')
                             <div class="text-danger">{{ $message }}</div>
@@ -22,7 +22,7 @@
 
                     <!-- Capacity -->
                     <div class="mb-3">
-                        <label for="capacity" class="form-label">Capacity:</label>
+                        <label for="capacity" class="form-label">Kapasitas:</label>
                         <input type="text" name="capacity" class="form-control" required>
                         @error('capacity')
                             <div class="text-danger">{{ $message }}</div>
@@ -31,7 +31,7 @@
 
                     <!-- Storage -->
                     <div class="mb-3">
-                        <label for="storage" class="form-label">Storage:</label>
+                        <label for="storage" class="form-label">Penyimpanan:</label>
                         <input type="text" name="storage" class="form-control" required>
                         @error('storage')
                             <div class="text-danger">{{ $message }}</div>
@@ -40,7 +40,7 @@
 
                     <!-- Nama Lengkap -->
                     <div class="mb-3">
-                        <label for="nama" class="form-label">Nama Lengkap:</label>
+                        <label for="nama" class="form-label">Nama:</label>
                         <input type="text" name="nama" class="form-control" required>
                         @error('nama')
                             <div class="text-danger">{{ $message }}</div>
@@ -67,7 +67,7 @@
 
                     <!-- Daya kWh Meter PLN -->
                     <div class="mb-3">
-                        <label for="daya" class="form-label">Daya kWh Meter PLN:</label>
+                        <label for="daya" class="form-label">Daya:</label>
                         <input type="text" name="daya" class="form-control" required>
                         @error('daya')
                             <div class="text-danger">{{ $message }}</div>
@@ -83,7 +83,7 @@
                         @enderror
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Create Installation</button>
+                    <button type="submit" class="btn btn-primary">Tambahkan</button>
                 </form>
             </div>
         </div>

@@ -16,25 +16,25 @@
 
                     <!-- Installation Title -->
                     <div class="mb-3">
-                        <label for="title" class="form-label">Title:</label>
+                        <label for="title" class="form-label">Nama Produk:</label>
                         <input type="text" name="title" class="form-control" value="{{ $installation->title }}" required>
                     </div>
 
                     <!-- Capacity -->
                     <div class="mb-3">
-                        <label for="capacity" class="form-label">Capacity:</label>
-                        <input type="text" name="capacity" class="form-control" value="{{ optional($installation->capacity)->capacity }}" required>
+                        <label for="capacity" class="form-label">Kapasitas:</label>
+                        <input type="text" name="capacity" class="form-control" value="{{$installation->capacity }}" required>
                     </div>
 
                     <!-- Storage -->
                     <div class="mb-3">
-                        <label for="storage" class="form-label">Storage:</label>
-                        <input type="text" name="storage" class="form-control" value="{{ optional($installation->storage)->storage }}" required>
+                        <label for="storage" class="form-label">Penyimpanan:</label>
+                        <input type="text" name="storage" class="form-control" value="{{ $installation->storage}}" required>
                     </div>
 
                     <!-- Nama Lengkap -->
                     <div class="mb-3">
-                        <label for="nama" class="form-label">Nama Lengkap:</label>
+                        <label for="nama" class="form-label">Nama:</label>
                         <input type="text" name="nama" class="form-control" value="{{ $installation->nama }}" required>
                     </div>
 
@@ -52,7 +52,7 @@
 
                     <!-- Daya kWh Meter PLN -->
                     <div class="mb-3">
-                        <label for="daya" class="form-label">Daya kWh Meter PLN:</label>
+                        <label for="daya" class="form-label">Daya:</label>
                         <input type="text" name="daya" class="form-control" value="{{ $installation->daya }}" required>
                     </div>
 
@@ -62,7 +62,7 @@
                         <textarea name="pesan" class="form-control">{{ $installation->pesan }}</textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Update Installation</button>
+                    <button type="submit" class="btn btn-primary">Update</button>
                 </form>
             </div>
         </div>

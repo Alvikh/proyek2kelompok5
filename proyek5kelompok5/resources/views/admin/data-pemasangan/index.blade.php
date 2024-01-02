@@ -51,23 +51,23 @@
         <table class="table-custom">
             <thead>
                 <tr>
-                    <th>Title</th>
-                    <th>Capacity</th>
-                    <th>Storage</th>
-                    <th>Nama Lengkap</th>
+                    <th>Nama Produk</th>
+                    <th>Kapasitas</th>
+                    <th>Penyimpanan</th>
+                    <th>Nama</th>
                     <th>Kota</th>
                     <th>Nomor HP</th>
-                    <th>Daya kWh Meter PLN</th>
+                    <th>Daya</th>
                     <th>Pesan</th>
-                    <th>Actions</th>
+                    <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($confirmedInstallations as $installation)
                     <tr>
                         <td style="width: 140px; padding: 10px;" >{{ $installation->title }}</td>
-                        <td style="width: 150px; padding: 10px;" >{{ optional($installation->capacity)->capacity }}</td>
-                        <td style="width: 150px; padding: 10px;">{{ optional($installation->storage)->storage }}</td>
+                        <td style="width: 150px; padding: 10px;" >{{ $installation->capacity }}</td>
+                        <td style="width: 150px; padding: 10px;">{{$installation->storage }}</td>
                         <td style="width: 150px; padding: 10px;">{{ $installation->nama }}</td>
                         <td>{{ $installation->kota }}</td>
                         <td>{{ $installation->hp }}</td>
