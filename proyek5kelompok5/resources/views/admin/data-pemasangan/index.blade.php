@@ -1,62 +1,54 @@
-<!-- admin.data-pemasangan.index.blade.php -->
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <title>Admin Confirmation</title>
-    <link rel="icon" type="image/x-icon" href="{{ asset('img/icon.ico') }}">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}" media="screen">
-    <!-- Add any additional styles if needed -->
-
-    <style>
-        /* Add your custom styles for the table here */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th, td {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-
-        tr:hover {
-            background-color: #f5f5f5;
-        }
-
-        button {
-            padding: 5px 10px;
-            cursor: pointer;
-        }
-
-        .container {
-            margin-top: 20px;
-        }
-    </style>
-</head>
-
 @extends('layouts.admin.admin')
 
 @section('main-content')
-    <div class="container">
-        <h3>Data Pemasangan</h3>
 
-        <!-- Add button for creating a new installation -->
-        <a href="{{ route('admin.data-pemasangan.create') }}">
-            <button>Create New Installation</button>
-        </a>
+    <h2>Data Pemasangan</h2>
+        <a href="{{ route('admin.data-pemasangan.create') }}" class="btn custom-btn-color mb-3">Masukkan Pemasukkan</a>     
 
-        <table>
+
+        <style>
+            .custom-btn-color {
+                background-color: #5AB7F4;
+                color: #fff;
+            }
+        
+            /* Custom Table Styles */
+            .table-custom {
+                border-collapse: collapse;
+                width: 100%;
+                margin-top: 20px;
+            }
+        
+            .table-custom th,
+            .table-custom td {
+                border: 1px solid #ddd;
+                padding: 10px; /* Increase padding for better readability */
+                text-align: left;
+                color: #000;
+            }
+        
+            .table-custom th {
+                background-color: #5AB7F4;
+                border: 1px solid #fff;
+                color: #fff;
+            }
+        
+            .table-custom tbody tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+        
+            .table-custom tbody tr:hover {
+                background-color: #e6f7ff;
+            }
+        
+            .btn-custom {
+                margin-right: 5px;
+            }
+        </style>
+        
+    
+</head>
+        <table class="table-custom">
             <thead>
                 <tr>
                     <th>Title</th>
@@ -73,27 +65,26 @@
             <tbody>
                 @foreach($confirmedInstallations as $installation)
                     <tr>
-                        <td>{{ $installation->title }}</td>
-                        <td>{{ optional($installation->capacity)->capacity }}</td>
-                        <td>{{ optional($installation->storage)->storage }}</td>
-                        <td>{{ $installation->nama }}</td>
+                        <td style="width: 140px; padding: 10px;" >{{ $installation->title }}</td>
+                        <td style="width: 150px; padding: 10px;" >{{ optional($installation->capacity)->capacity }}</td>
+                        <td style="width: 150px; padding: 10px;">{{ optional($installation->storage)->storage }}</td>
+                        <td style="width: 150px; padding: 10px;">{{ $installation->nama }}</td>
                         <td>{{ $installation->kota }}</td>
                         <td>{{ $installation->hp }}</td>
                         <td>{{ $installation->daya }}</td>
-                        <td>{{ $installation->pesan }}</td>
+                        <td style="width: 150px; padding: 10px;">{{ $installation->pesan }}</td>
                         <td>
                             <!-- Add edit and delete actions -->
-                            <a href="{{ route('admin.data-pemasangan.edit', $installation->id) }}">Edit</a>
-                            |
+                            <a href="{{ route('admin.data-pemasangan.edit', $installation->id) }}" class="btn btn-warning btn-custom">Edit</a>
                             <form action="{{ route('admin.data-pemasangan.destroy', $installation->id) }}" method="post">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit">Delete</button>
+                                <button type="submit" class="btn btn-danger btn-custom" onclick="return confirm('Apakah Anda yakin ingin menghapus data pemasukkan?')">Hapus</button>
                             </form>
                         </td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
-    </div>
+
 @endsection

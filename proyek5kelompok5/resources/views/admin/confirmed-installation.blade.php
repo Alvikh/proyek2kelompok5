@@ -1,55 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <title>Admin Confirmation</title>
-    <link rel="icon" type="image/x-icon" href="{{ asset('img/icon.ico') }}">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}" media="screen">
-    <!-- Add any additional styles if needed -->
-
-    <style>
-        /* Add your custom styles for the table here */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th, td {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-
-        tr:hover {
-            background-color: #f5f5f5;
-        }
-
-        button {
-            padding: 5px 10px;
-            cursor: pointer;
-        }
-
-        .container {
-            margin-top: 20px;
-        }
-    </style>
-</head>
 
 @extends('layouts.admin.admin')
 
 @section('main-content')
-    <div class="container">
-        <h3>Confirmed Items</h3>
-        <table>
+
+<h3>Confirmed Items</h3>
+
+<style>
+    .custom-btn-color {
+        background-color: #5AB7F4; 
+        color: #fff; 
+    }
+    /* Custom Table Styles */
+    .table-custom {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .table-custom th, .table-custom td {
+        border: 1px solid #ddd;
+        padding: 15px;
+        text-align: left;
+        color: #000; /* Black text color added */
+    }
+
+    .table-custom th {
+        background-color: #5AB7F4;
+        border: 1px solid #fff; /* Black border added */
+        color: #fff; /* Text color */
+    }
+    .table-custom tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    .table-custom tbody tr:hover {
+        background-color: #e6f7ff;
+    }
+
+    .btn-custom {
+        margin-right: 5px;
+    }
+</style>
+
+        <table class="table table-custom">
             <thead>
                 <tr>
                     <th>Title</th>
@@ -77,5 +70,4 @@
                 @endforeach
             </tbody>
         </table>
-    </div>
 @endsection

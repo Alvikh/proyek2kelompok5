@@ -1,7 +1,7 @@
 @extends('layouts.admin.admin')
 
 @section('main-content')
-    <div class="container">
+
         <h2>Data Pemasukkan</h2>
         <a href="{{ route('pemasukkan.create') }}" class="btn custom-btn-color mb-3">Masukkan Pemasukkan</a>
 
@@ -89,5 +89,4 @@
             </tbody>
             
         </table>
-    </div>
 @endsection
