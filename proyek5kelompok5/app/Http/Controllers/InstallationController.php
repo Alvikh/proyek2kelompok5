@@ -7,12 +7,6 @@ use App\Models\Installation;
 
 class InstallationController extends Controller
 {
-    public function showInstallationForm($blogId)
-    {
-        $blog = Blog::find($blogId);
-        return view('pasang', compact('blog'));
-    }
-
     public function storeInstallation(Request $request)
     {
         $installation = new Installation();
@@ -26,6 +20,6 @@ class InstallationController extends Controller
         $installation->pesan = $request->input('pesan');
         $installation->save();
 
-        return redirect()->route('submitted');
+        return view('submitted');
     }
 }

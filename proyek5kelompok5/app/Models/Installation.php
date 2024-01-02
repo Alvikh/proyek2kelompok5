@@ -10,6 +10,7 @@ class Installation extends Model
     use HasFactory;
 
     protected $fillable = [
+        'user_id',
         'title',
         'capacity',
         'storage',
@@ -18,5 +19,6 @@ class Installation extends Model
         'hp',
         'daya',
         'pesan',
+        'confirmation',
     ];
 }

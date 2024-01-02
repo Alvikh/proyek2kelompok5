@@ -43,38 +43,35 @@
                 <div class="card-body">
                     <div>
                         <h4>Digunakan</h4>
-                        @if($paket && $paket->confirmation)
-                        <div class="mb-3 row">
-                            <label for="staticEmail" class="col-sm-2 col-form-label">Nama</label>
-                            <div class="col-sm-10">
-                              <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{ $paket->nama }}">
-                            </div>
-                          </div>
-                          <div class="mb-3 row">
-                            <label for="staticEmail" class="col-sm-2 col-form-label">Kota</label>
-                            <div class="col-sm-10">
-                              <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{ $paket->kota }}">
-                            </div>
-                          </div>
-                          <div class="mb-3 row">
-                            <label for="staticEmail" class="col-sm-2 col-form-label">HP</label>
-                            <div class="col-sm-10">
-                              <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{ $paket->hp }}">
-                            </div>
-                          </div>
-                          <div class="mb-3 row">
-                            <label for="staticEmail" class="col-sm-2 col-form-label">Daya</label>
-                            <div class="col-sm-10">
-                              <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{ $paket->daya }}">
-                            </div>
-                          </div>
-                          <div class="mb-3 row">
-                            <label for="staticEmail" class="col-sm-2 col-form-label">Paket Kebutuhan</label>
-                            <div class="col-sm-10">
-                              <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{ $paket->paket_kebutuhan }}">
-                            </div>
-                          </div>
-                          @endif
+                        @if($confirmedInstallation && $confirmedInstallation->confirmation)
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Capacity</th>
+                                    <th>Storage</th>
+                                    <th>Nama Lengkap</th>
+                                    <th>Kota</th>
+                                    <th>Nomor HP</th>
+                                    <th>Daya kWh Meter PLN</th>
+                                    <th>Pesan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>{{ $confirmedInstallation->title }}</td>
+                                    <td>{{ optional($confirmedInstallation->capacity)->capacity }}</td>
+                                    <td>{{ optional($confirmedInstallation->storage)->storage }}</td>
+                                    <td>{{ $confirmedInstallation->nama }}</td>
+                                    <td>{{ $confirmedInstallation->kota }}</td>
+                                    <td>{{ $confirmedInstallation->hp }}</td>
+                                    <td>{{ $confirmedInstallation->daya }}</td>
+                                    <td>{{ $confirmedInstallation->pesan }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    @endif
+                    
                     </div>
                     
                     <br>

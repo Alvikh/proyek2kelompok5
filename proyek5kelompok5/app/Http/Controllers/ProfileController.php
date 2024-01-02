@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use App\Models\PaketOrder;
+use App\Models\Installation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -18,9 +18,11 @@ class ProfileController extends Controller
     public function index()
     {
         $userId = Auth::user()->id;
-        $paket = PaketOrder::where('id', $userId)->first();
-
-        return view('profile', ['paket' => $paket]);
+        $confirmedInstallation = Installations::where('id', $userId)
+            ->where('installation', 1)
+            ->first();
+    
+        return view('profile', ['confirmedInstallation' => $confirmedInstallation]);
     }
 
     public function update(Request $request)

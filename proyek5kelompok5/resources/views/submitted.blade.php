@@ -24,16 +24,12 @@
 <body style="background-color: #3498db;">
 
     @section('content')
-    <div class="container mt-5">
-        <div class="alert alert-success" role="alert">
-            <h4 class="alert-heading">Terima kasih!</h4>
-            <p>Formulir Anda telah berhasil terkirim.</p>
-            <hr>
-            <p class="mb-0">Kami akan segera memproses formulir Anda. Terima kasih atas partisipasi Anda.</p>
-        </div>
+    <div>
+        <h1>Form Submitted Successfully</h1>
+        <p>Thank you for submitting the form. Your data has been successfully recorded.</p>
+        <!-- You can customize the content of the submitted page as needed -->
     </div>
     @include('layouts.footer')
     @endsection
 </body>
-
 </html>

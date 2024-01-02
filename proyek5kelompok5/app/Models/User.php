@@ -93,5 +93,8 @@ class User extends Authenticatable
 {
     return $this->have_role && strtolower($role) == strtolower($this->have_role->nama);
 }
-
+public function installations()
+{
+    return $this->hasMany(Installation::class);
+}
 }

@@ -51,10 +51,6 @@ Route::group(['middleware' => ['web', 'auth', 'roles']],function(){
     });
    });
 
-use App\Http\Controllers\FormController;
-
-Route::post('/submitted', [FormController::class, 'submitted'])->name('submitted');
-
 
 
 //admin route
@@ -76,17 +72,26 @@ Route::delete('/admin/pegawai/{id}', [PegawaiController::class, 'destroy'])->nam
 
 //konfirmasi form
 
-use App\Http\Controllers\PaketOrderController;
-
-Route::get('/admin/confirmations', [PaketOrderController::class, 'index'])->name('admin.confirmations.index');
-Route::put('/admin/confirmations/{id}', [PaketOrderController::class, 'update'])->name('admin.confirmations.konfirmasi');
-
 use App\Http\Controllers\AdminConfirmationController;
 
-Route::get('/admin/confirmed-paket-orders', [AdminConfirmationController::class, 'showConfirmedPaketOrders'])
-    ->name('admin.confirmed-paket-orders');
+Route::get('/admin/confirmation', [AdminConfirmationController::class, 'showAdminConfirmationView'])->name('admin.confirmation');
+Route::post('/admin/confirm/{id}', [AdminConfirmationController::class, 'confirm'])->name('admin.confirm');
+Route::post('/admin/reject/{id}', [AdminConfirmationController::class, 'reject'])->name('admin.reject');
+Route::get('/admin/confirmed-installation', [AdminConfirmationController::class, 'showConfirmedInstallation'])
+    ->name('admin.confirmed-installation');
+
+    use App\Http\Controllers\AdminDataPemasanganController;
+
+    Route::get('/admin/data-pemasangan', [AdminDataPemasanganController::class, 'index'])->name('admin.data-pemasangan.index');
+    Route::get('/admin/data-pemasangan/create', [AdminDataPemasanganController::class, 'create'])->name('admin.data-pemasangan.create');
+    Route::post('/admin/data-pemasangan/store', [AdminDataPemasanganController::class, 'store'])->name('admin.data-pemasangan.store');
+    Route::get('/admin/data-pemasangan/edit/{id}', [AdminDataPemasanganController::class, 'edit'])->name('admin.data-pemasangan.edit');
+    Route::put('/admin/data-pemasangan/update/{id}', [AdminDataPemasanganController::class, 'update'])->name('admin.data-pemasangan.update');
+    Route::delete('/admin/data-pemasangan/delete/{id}', [AdminDataPemasanganController::class, 'destroy'])->name('admin.data-pemasangan.destroy');
+    
 
 use App\Http\Controllers\UserController;
+
 
 Route::get('/admin/users', [UserController::class, 'index'])->name('admin.users.index');
 
@@ -131,6 +136,11 @@ Route::delete('/admin/storage/{storage}', [StorageController::class, 'destroy'])
 Route::get('/produk', [BlogController::class, 'produk'])->name('produk');
 
 Route::get('/pasang/{blogId}', [BlogController::class, 'showInstallationForm'])->name('pasang');
+
+use App\Http\Controllers\InstallationController;
+
+Route::post('/installation/store', [InstallationController::class, 'storeInstallation'])->name('installation.store');
+Route::post('/submit-installation', 'InstallationController@storeInstallation')->name('submit-installation');
 
 use App\Http\Controllers\BarController;
 Route::get('/bar', [BarController::class, 'barChart']);

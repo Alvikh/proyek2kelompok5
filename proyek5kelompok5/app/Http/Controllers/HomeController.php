@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use App\Models\PaketOrder;
+use App\Models\Installation;
 use App\Models\Pemasukkan;
 use Illuminate\Http\Request;
 
@@ -27,12 +27,12 @@ class HomeController extends Controller
     public function index()
 {
     $users = User::count();
-    $paketOrdersCount = PaketOrder::count();
+    $installationsCount = Installation::count();
     $totalJumlahSisaUangMasuk = Pemasukkan::sum('jumlah_sisa_uang_masuk');
 
     $widget = [
         'users' => $users,
-        'paketOrders' => $paketOrdersCount,
+        'installations' => $installationsCount,
         'totalJumlahSisaUangMasuk' => $totalJumlahSisaUangMasuk,
         
     ];

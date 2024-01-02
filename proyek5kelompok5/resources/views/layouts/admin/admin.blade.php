@@ -76,24 +76,25 @@
             </a>
         </li>
 
-        <li class="nav-item {{ request()->routeIs('admin.confirmations.index') ? 'active' : '' }}">
-            <a class="nav-link" href="{{ route('admin.confirmations.index') }}">
+        <li class="nav-item {{ request()->routeIs('admin.confirmation') ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('admin.confirmation') }}">
                 <i class="fas fa-fw fa-solid fa-table"></i>
                 <span>{{ __('Order') }}</span>
             </a>
         </li>
+        
     
 
 <!-- Nav Item - Customer -->
-<li class="nav-item {{ request()->routeIs('admin.confirmed-paket-orders') ? 'active' : '' }}">
-    <a class="nav-link" href="{{ route('admin.confirmed-paket-orders') }}">
+<li class="nav-item {{ request()->routeIs('admin.confirmed-installation') ? 'active' : '' }}">
+    <a class="nav-link" href="{{ route('admin.confirmed-installation') }}">
         <i class="fas fa-fw fa-solid fa-users"></i>
         <span>{{ __('Customer') }}</span>
     </a>
 </li>
 <!-- Nav Item - pemasangan-->
-<li class="nav-item {{ request()->routeIs('admin.confirmed-paket-orders') ? 'active' : '' }}">
-    <a class="nav-link" href="{{ route('admin.confirmed-paket-orders') }}">
+<li class="nav-item {{ request()->routeIs('admin.data-pemasangan.index') ? 'active' : '' }}">
+    <a class="nav-link" href="{{ route('admin.data-pemasangan.index') }}">
         <i class="fas fa-person-digging"></i>
         <span>{{ __('Data Pemasangan') }}</span>
     </a>
