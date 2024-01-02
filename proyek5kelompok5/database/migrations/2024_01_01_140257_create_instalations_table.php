@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('hp');
             $table->string('daya');
             $table->text('pesan');
+            $table->string('status')->default('pending'); // Add 'status' column with a default value
             $table->timestamps();
         });
     }

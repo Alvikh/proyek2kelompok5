@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use App\Models\Installation;
+use App\Models\Installations; 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -19,7 +19,7 @@ class ProfileController extends Controller
     {
         $userId = Auth::user()->id;
         $confirmedInstallation = Installations::where('id', $userId)
-            ->where('installation', 1)
+            ->where('status', 1)
             ->first();
     
         return view('profile', ['confirmedInstallation' => $confirmedInstallation]);
