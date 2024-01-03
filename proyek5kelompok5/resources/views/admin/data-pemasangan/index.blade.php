@@ -3,7 +3,7 @@
 @section('main-content')
 
     <h2>Data Pemasangan</h2>
-        <a href="{{ route('admin.data-pemasangan.create') }}" class="btn custom-btn-color mb-3">Masukkan Pemasukkan</a>     
+        <a href="{{ route('admin.data-pemasangan.create') }}" class="btn custom-btn-color mb-3">Masukkan Data Pemasangan</a>     
 
 
         <style>
