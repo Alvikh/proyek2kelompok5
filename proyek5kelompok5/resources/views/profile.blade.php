@@ -60,8 +60,8 @@
                             <tbody>
                                 <tr>
                                     <td>{{ $confirmedInstallation->title }}</td>
-                                    <td>{{ optional($confirmedInstallation->capacity)->capacity }}</td>
-                                    <td>{{ optional($confirmedInstallation->storage)->storage }}</td>
+                                    <td>{{ $confirmedInstallation->capacity}}</td>
+                                    <td>{{ $confirmedInstallation->storage }}</td>
                                     <td>{{ $confirmedInstallation->nama }}</td>
                                     <td>{{ $confirmedInstallation->kota }}</td>
                                     <td>{{ $confirmedInstallation->hp }}</td>
