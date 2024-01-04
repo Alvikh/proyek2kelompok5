@@ -19,7 +19,7 @@ class ProfileController extends Controller
     {
         $userId = Auth::user()->id;
         $confirmedInstallation = Installations::where('id', $userId)
-            ->where('status', 1)
+            ->where('status', 'confirmed')
             ->first();
     
         return view('profile', ['confirmedInstallation' => $confirmedInstallation]);

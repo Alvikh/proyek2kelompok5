@@ -10,7 +10,7 @@ class InstallationController extends Controller
     public function storeInstallation(Request $request)
     {
         // Validate the input data
-        $request->validate([
+        /*$request->validate([
             'title' => 'required|string',
             'capacity' => 'required|string',
             'storage' => 'required|string',
@@ -19,10 +19,12 @@ class InstallationController extends Controller
             'hp' => 'required|string',
             'daya' => 'required|string',
             'pesan' => 'required|string',
-        ]);
+            'status' => 'required|string',
+        ]);*/
 
         // Create a new Installation instance and save it to the database
         $installation = new Installation();
+        $installation->id = auth()->user()->id;
         $installation->title = $request->input('title');
         $installation->capacity = $request->input('capacity');
         $installation->storage = $request->input('storage');
@@ -31,8 +33,8 @@ class InstallationController extends Controller
         $installation->hp = $request->input('hp');
         $installation->daya = $request->input('daya');
         $installation->pesan = $request->input('pesan');
-$installation->status = 'pending'; // Provide a default status value
-$installation->save();
+        $installation->status = 'pending'; // Provide a default status value
+        $installation->save();
 
 
 

@@ -43,7 +43,7 @@
                 <div class="card-body">
                     <div>
                         <h4>Digunakan</h4>
-                        @if($confirmedInstallation && $confirmedInstallation->confirmation)
+                        @if($confirmedInstallation)
                         <table class="table">
                             <thead>
                                 <tr>
